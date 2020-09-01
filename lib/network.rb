@@ -23,4 +23,10 @@ class Network
     end
     main_characters
   end
+
+  def actors_by_show
+    @shows.group_by do |show|
+      show.actors
+    end.invert
+  end
 end
